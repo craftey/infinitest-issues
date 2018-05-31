@@ -1,3 +1,5 @@
 # Issues with infinitest
 
 Issue 1: link:testng-jmockit-issue[infinitest + testng + jmockit + dataprovider]
+
+Issue 2: link:groups-issue[infinitest with groups]

@@ -1,0 +1,5 @@
+## TestNG Configuration
+# legacy setting include groups setting
+## groups=dummy
+# current version include groups setting
+includeGroups dummy

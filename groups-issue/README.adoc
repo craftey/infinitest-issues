@@ -1,0 +1,26 @@
+# Issue with infinitest + testng + jmockit + dataprovider
+
+I have 5 Tests. `GroupTest1` should fail because it contains:
+
+[source,java]
+assertThat(true).isFalse();
+
+But when we run this with Intellij's plugin *Infinitest* it looks like all tests pass:
+
+image::img/all_pass.png[,500]
+
+Tested with legacy version 5.1.116 or latest 5.2.0.
+
+It turned out that I misinterpreted "All Pass".
+It actually means that infinitest looked into 5 Test classes
+and did not run any test method at all due to the `infinitest.filters` configuration
+but still counted the class as success (what else :/).
+This was a bit confusing in a big project with hundreds of Test classes where I
+at first thought all included tests were green.
+
+I think I had this confusion also because excluding Tests via filename pattern
+removes the test classes from the final test count and I got used to it.
+
+So here I would suggest to improve the result display whats actually happening in case of
+groups exclusions.
+
