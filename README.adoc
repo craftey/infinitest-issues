@@ -1,0 +1,3 @@
+# Issues with infinitest
+
+Issue 1: link:testng-jmockit-issue[infinitest + testng + jmockit + dataprovider]
