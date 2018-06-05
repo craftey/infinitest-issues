@@ -1,4 +1,4 @@
-# Issue with infinitest + testng + jmockit + dataprovider
+# Issue with infinitest and groups
 
 I have 5 Tests. `GroupTest1` should fail because it contains:
 
@@ -22,5 +22,5 @@ I think I had this confusion also because excluding Tests via filename pattern
 removes the test classes from the final test count and I got used to it.
 
 So here I would suggest to improve the result display whats actually happening in case of
-groups exclusions.
+groups exclusions/inclusions.
 
